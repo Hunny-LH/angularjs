@@ -7,4 +7,5 @@ app
 .bowerrc
 bower.json
 Gruntfile.js
-pagechage.json
+package.json
+app.js
