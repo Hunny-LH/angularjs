@@ -3,7 +3,6 @@ node_modules
 .sass-cache
 .tmp
 .setting
-app
 .bowerrc
 bower.json
 Gruntfile.js
