@@ -10,7 +10,7 @@
  * Controller of the angularjsApp
  */
 angular.module('angularjsApp')
-    .controller('MainCtrl', ['$scope', '$state', 'Menu',
+    .controller('MainCtrl', ['$scope', '$state',
         function($scope, $state) {
             $scope.submit = function() {
                 var user = $scope.user;
@@ -20,7 +20,7 @@ angular.module('angularjsApp')
             };
 
             $scope.hasLogin = function() {
-                console.log($state.current.name);
+                // console.log($state.current.name);
                 if ($state.current.name !== "index.login") {
                     return true;
                 }
@@ -46,22 +46,6 @@ angular.module('angularjsApp')
 
         }
     ]).
-factory('Menu', ['$http', 'HTTP_API', function($http, HTTP_API) {
-    return {
-        query: function(pid) {
-            return $http.get(HTTP_API + "/menu/list/" + pid + ".json")
-                .then(function(response) {
-                    var result = [];
-                    // console.log(response.data);
-                    angular.forEach(response.data.menuList, function(value, key) {
-                        result[key] = value;
-                    });
-                    // console.log(result);
-                    return result;
-                });
-        }
-    };
-}]).
 config(['$stateProvider', function($stateProvider) {
     $stateProvider
         .state('index', {
@@ -71,22 +55,22 @@ config(['$stateProvider', function($stateProvider) {
         })
         .state('index.default', {
             url: "/default",
-            templateUrl: "views/home/default.html",
+            templateUrl: "views/default/default.html",
             controller: 'MainCtrl'
         })
         .state('index.login', {
             url: "/login",
-            templateUrl: "views/home/login.html",
+            templateUrl: "views/login/login.html",
             controller: 'MainCtrl'
         })
-        .state('index.content', {
-            url: "/content",
-            templateUrl: "views/content.html",
-            controller: 'ContentCtrl'
+        .state('index.article', {
+            url: "/article",
+            templateUrl: "views/article/article.html",
+            controller: 'ArticleCtrl'
         })
         .state('index.publish', {
             url: "/publish",
-            templateUrl: "views/publish.html",
+            templateUrl: "views/publish/publish.html",
             controller: 'PublishCtrl'
         });
 

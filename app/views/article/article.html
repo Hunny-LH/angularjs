@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-12">
+          <div class="col-md-9">
+                <div class="page-header">
+                    <h3>话题</h3>
+                </div>
+                <div class="row">
+                    <form>
+                        <p>
+                          <textarea class="form-control " style="resize: none;" rows="3" ng-model="content" required  ng-required="true" placeholder="说点什么？"></textarea>
+                        </p>
+                        <div class="form-inline pull-right">
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="nickname"
+                                     placeholder="请取一个名字" ng-model="nickname" required  ng-required="true">
+                              </div>
+                              <button  class="btn btn-info" ng-click="add()">发布</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                      <br>
+                      <div class="panel panel-success" ng-repeat="article in articles">
+                            <div class="panel-heading">
+                                        <span>{{user.nickname}} | {{user.ip}} | {{article.createTime}}</span>
+                                        <a class="pull-right" href="javascript:void(0)" ng-click="delete(article)">删除</a>
+                                        <span class="pull-right">评论{{comments.length}}次&nbsp;|&nbsp;</span>
+                                         
+                            </div>
+                            <div class="panel-body">
+                                       {{article.content}}
+                                
+                            </div>
+                      </div>
+                     
+                </div>
+          </div>
+          <div class="col-md-3 visible-md-block visible-lg-block">
+                <div class="page-header text-right">
+                    <h3>伙伴</h3>
+                </div>
+          </div>
+    </div>
+</div>
+
+      
+
+      

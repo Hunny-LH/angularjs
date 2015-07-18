@@ -11,14 +11,14 @@
  */
 angular.module('angularjsApp', [
     // 'ngAnimate',
+    'ngResource',
     'ui.router',
-    
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'app.services'
 ]).
 config(function($urlRouterProvider) {
     // For any unmatched url, redirect to /state1
     $urlRouterProvider.when("", "/index/default")
         .otherwise("/index/default"); 
-})
-.constant('HTTP_API', "http://localhost:8089/rest/api")
-.constant('BASE_DATA', "data");
+});
+
