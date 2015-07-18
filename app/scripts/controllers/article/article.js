@@ -20,6 +20,8 @@ angular.module('angularjsApp')
 							createTime: new Date().toLocaleString()
 						}
 						$scope.articles.push(article);
+						$scope.content = "";
+						$scope.nickname = "";
 					}else{
 						alert("不能为空");
 					}
