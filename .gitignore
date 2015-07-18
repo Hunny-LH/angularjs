@@ -3,10 +3,10 @@ node_modules
 .sass-cache
 .tmp
 .settings
-.bowerrc
-bower.json
+# .bowerrc
+# bower.json
 Gruntfile.js
-package.json
+# package.json
 .gitattributes
 .jshintrc
 .travis.yml
