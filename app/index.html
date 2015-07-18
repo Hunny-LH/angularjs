@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+ 
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/mystyle.css">
+    <!-- endbuild -->
+    <style>
+      .carousel-control{
+          border-radius: 15px;
+          -webkit-border-radius: 15px;
+          -moz-border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body ng-app="angularjsApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="container" ui-view></div>
+
+
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+         <!-- bower:js -->
+         <script src="bower_components/jquery/dist/jquery.js"></script>
+         <script src="bower_components/angular/angular.js"></script>
+         <script src="bower_components/angular-animate/angular-animate.js"></script>
+         <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+         <!-- endbower -->
+    <!-- endbuild -->
+    <script src="//cdn.bootcss.com/angular-ui-bootstrap/0.13.0/ui-bootstrap.js"></script>
+    <script src="//cdn.bootcss.com/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.js"></script>
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/content.js"></script>
+        <script src="scripts/controllers/default.js"></script>
+        <script src="scripts/controllers/publish.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
