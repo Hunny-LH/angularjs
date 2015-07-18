@@ -5,6 +5,7 @@
 html,
 body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
+  font-family: 'Microsoft Yahei','Verdana, Geneva, Tahoma, sans-serif';
 }
 body {
   padding-top: 70px;

@@ -13,6 +13,14 @@
 	-webkit-border-radius: 15px; 
 	-moz-border-radius: 15px; 
 }
+
+.icon-border{
+	/*border: 1px solid lightgrey;*/
+	-moz-box-shadow: 0 0 10px 1px gainsboro;
+	-webkit-box-shadow: 0 0 10px 1px gainsboro;
+	box-shadow: 0 0 10px 1px gainsboro;
+}
+
 #container{
 	min-height: 500px;
 }
@@ -20,4 +28,10 @@
 .ng-animate.item:not(.left):not(.right) {
   -webkit-transition: 0s ease-in-out left;
   transition: 0s ease-in-out left
+}
+
+.nickname{
+	display: block;
+	padding-top: 15px;
+	font-weight: 700;
 }
