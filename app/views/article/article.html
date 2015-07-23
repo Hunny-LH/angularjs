@@ -5,7 +5,6 @@
                     <h3>话题</h3>
                 </div>
                 <div class="col-md-12">
-                    <form>
                         <p>
                           <textarea class="form-control " style="resize: none;" rows="3" ng-model="content" required  ng-required="true" placeholder="说点什么？"></textarea>
                         </p>
@@ -16,7 +15,6 @@
                               </div>
                               <button  class="btn btn-info" ng-click="add()">发布</button>
                         </div>
-                    </form>
                 </div>
                 <div class="col-md-12">
                       <br>
@@ -24,12 +22,38 @@
                             <div class="panel-heading">
                                         <span>{{user.nickname}} | {{user.ip}} | {{article.createTime}}</span>
                                         <a class="pull-right" href="javascript:void(0)" ng-click="delete(article)">删除</a>
-                                        <span class="pull-right">评论{{comments.length}}次&nbsp;|&nbsp;</span>
-                                         
+                                        <span class="pull-right">
+                                            <a href="javascript:void(0);" ng-click="comment()">评论</a>
+                                             {{comments.length}}次&nbsp;|&nbsp;</span>     
                             </div>
                             <div class="panel-body">
-                                       {{article.content}}
-                                
+                                    <div class="col-md-12">
+                                       <p> {{article.content}}</p>
+                                    </div>
+                                    <div class="col-md-12">
+                                            <div class="comment-box">
+                                                   <div class="col-md-12">
+                                                        <span>虹宝宝&nbsp;&nbsp;</span><span style="font-size:10px">2015/7/18 12:04</span>
+                                                   </div>
+                                                   <div class="col-md-12">
+                                                        哈哈
+                                                   </div>
+                                            </div>
+                                    </div>  
+                                       
+                            </div>
+                            <div class="panel-body"  ng-show="showComment">
+                                    <p>
+                                            <textarea class="form-control " style="resize: none;" rows="3" ng-model="content" required  ng-required="true" placeholder="说点什么？"></textarea>
+                                    </p>
+                                    <div class="form-inline pull-right">
+                                    <div class="form-group">
+                                            <input type="text" class="form-control" id="nickname"
+                                            placeholder="您是谁" ng-model="nickname" required  ng-required="true">
+                                    </div>
+                                            <button  class="btn btn-info" ng-click="addComment()">评论</button>
+                                             <button  class="btn btn-info" ng-click="hide()">取消</button>
+                                    </div>
                             </div>
                       </div>
                      

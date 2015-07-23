@@ -20,6 +20,7 @@ angular.module('angularjsApp')
 							createTime: new Date().toLocaleString()
 						}
 						$scope.articles.push(article);
+						
 						$scope.content = "";
 						$scope.nickname = "";
 					}else{
@@ -29,6 +30,14 @@ angular.module('angularjsApp')
 				
 				$scope.delete = function(article){
 						$scope.articles.pop(article);
+				}
+				
+				$scope.showComment = false;
+				$scope.comment = function(){
+					$scope.showComment = true;
+				}
+				$scope.hide = function(){
+					$scope.showComment = false;
 				}
 		}
 	]);

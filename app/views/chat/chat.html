@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-md-12">
+          <div class="col-md-9">
+                <div class="page-header">
+                    <h3>我：<small ng-bind="nickname"></small></h3>
+					
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                          <textarea class="form-control " style="resize: none;" rows="3" ng-model="content" required  ng-required="true" placeholder="说点什么？"></textarea>
+                        </p>
+                        <div class="form-inline pull-right">
+                              <button  class="btn btn-info" ng-click="send()">发送</button>
+                        </div>
+                     </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                      <div class="panel panel-primary" >
+                              <div class="panel-body" ng-repeat="message in messages">
+                                        <span ng-bind="message.nickname"></span>
+                                        （<span ng-bind="message.ip"></span>）：
+                                        <span ng-bind="message.message"></span>
+                              </div>
+                      </div>
+                   </div>
+                </div>
+          </div>
+          <div class="col-md-3 visible-md-block visible-lg-block">
+                <div class="page-header text-right">
+                    <h3>谁在线</h3>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-3">
+                                    <img class="icon-border radius" src="images/touxiang.jpeg" alt="">
+                            </div>
+                           <div class=" col-md-9">
+                               <span class="nickname">尺素流年</span>
+                           </div>
+                    </div>
+                    <br>
+                     <div class="row">
+                            <span>当前在线：1人</span>
+                     </div>           
+                </div>
+                    
+          </div>
+    </div>
+</div>
+
+      
+
+      

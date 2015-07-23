@@ -72,6 +72,11 @@ config(['$stateProvider', function($stateProvider) {
             url: "/publish",
             templateUrl: "views/publish/publish.html",
             controller: 'PublishCtrl'
+        })
+        .state("index.chat", {
+            url: "/chat",
+            templateUrl: "views/chat/chat.html",
+            controller: 'ChatCtrl'
         });
 
 }]);
