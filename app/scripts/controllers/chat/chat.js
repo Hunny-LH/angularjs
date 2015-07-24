@@ -4,7 +4,7 @@
 angular.module('angularjsApp')
 .controller('ChatCtrl',['$scope', 'socket', '$timeout', function($scope, socket,$timeout){
 		
-		socket.connect("ws://127.0.0.1:8080/webscoket");
+		socket.connect("ws://127.0.0.1:8080/angualrServer/webscoket");
 		
 	    var messages = [];
 		
