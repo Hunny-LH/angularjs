@@ -14,7 +14,8 @@ angular.module('angularjsApp', [
     'ngResource',
     'ui.router',
     'ui.bootstrap',
-    'app.services'
+    'app.services',
+    'app.directives'
 ]).
 config(function($urlRouterProvider) {
     // For any unmatched url, redirect to /state1
