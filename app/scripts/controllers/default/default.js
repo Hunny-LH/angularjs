@@ -10,6 +10,7 @@
  * Controller of the angularjsApp
  */
 angular.module('angularjsApp')
-    .controller('DefaultCtrl', function ($scope) {
-        $scope.msg = "";
-    });
+    .controller('DefaultCtrl',[function ($scope) {
+        
+        
+    }]);

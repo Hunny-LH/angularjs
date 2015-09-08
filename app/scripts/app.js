@@ -13,7 +13,6 @@ angular.module('angularjsApp', [
     // 'ngAnimate',
     'ngResource',
     'ui.router',
-    'ui.bootstrap',
     'app.services',
     'app.directives'
 ]).
