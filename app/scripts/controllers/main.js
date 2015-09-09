@@ -10,10 +10,12 @@
  * Controller of the angularjsApp
  */
 angular.module('angularjsApp')
-    .controller('MainCtrl', ['$scope', '$state', 'weatherService',
-        function($scope, $state, weatherService) {
-           
-            weatherService.getWeather("成都");
+    .controller('MainCtrl', ['$scope','$state','ipService',
+        function($scope,$state,ipService) {
+            ipService.get(function(data){
+                console.log(data);
+                $scope.ip = data;
+            })
         }
     ]).
 config(['$stateProvider', function($stateProvider) {
@@ -26,7 +28,7 @@ config(['$stateProvider', function($stateProvider) {
         .state('index.default', {
             url: "/default",
             templateUrl: "views/default/default.html",
-            controller: 'MainCtrl'
+            controller: 'DefaultCtrl'
         })
         .state('index.publish', {
             url: "/publish",
@@ -34,3 +36,8 @@ config(['$stateProvider', function($stateProvider) {
             controller: 'PublishCtrl'
         });
 }]);
+
+
+function jsonp_callback(data){
+    console.log(data);
+}

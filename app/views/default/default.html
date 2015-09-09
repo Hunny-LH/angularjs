@@ -1,20 +1,38 @@
- <div class="jumbotron">
-        <h1>Welcome to my home site</h1>
+<div class="jumbotron">
+        <div class="row">
+                <div class="col-xs-4">
+                        <img src="http://pic.58pic.com/58pic/15/46/93/46D58PICFkd_1024.png" alt="" width="150" height="150">
+                </div>
+                <div class="col-xs-8">
+                        <h4>今日天气：</h4>
+                        <p ng-hide="msg" style="margin:0px;padding:0px">
+                                {{weather.city}} | {{weather.date}} {{weather.time}}
+                                <br> {{weather.weather}} | {{weather.temp}}&#8451; ( {{weather.l_tmp}} ~ {{weather.h_tmp}}&#8451; )
+                                <br> {{weather.WD}} | {{weather.WS}}
+                                <br>
+                                <h4><a href="javascript:void(0)">查询更多</a></h4>
+                        </p>
+                        <p ng-show="msg" style="margin:0px;padding:0px">
+                                服务异常，暂时无法获取到天气。
+                        </p>
+                </div>
+
+        </div>
 </div>
 
 <div class="row marketing">
         <div class="col-lg-9">
                 <h3>今日话题</h3>
                 <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-                
+
                 <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-                
+
                 <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
         <div class="col-lg-3">
                 <h3>快捷工具</h3>
                 <div class="col-md-12">
-                        
+
                 </div>
         </div>
 </div>

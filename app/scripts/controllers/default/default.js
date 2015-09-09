@@ -10,7 +10,17 @@
  * Controller of the angularjsApp
  */
 angular.module('angularjsApp')
-    .controller('DefaultCtrl',[function ($scope) {
-        
-        
+    .controller('DefaultCtrl',['$scope','$state','weatherService',
+        function ($scope,$state,weatherService) {
+          weatherService.get({cityname:"成都"},
+              function(data){
+                   console.log(data); 
+                   if(data.errNum==0){
+                       $scope.msg = false;
+                       $scope.weather = data.retData;
+                   }else{
+                       $scope.msg = data.errMsg;
+                   }
+              });
+            
     }]);

@@ -18,7 +18,8 @@ angular.module('angularjsApp', [
 ]).
 config(function($urlRouterProvider) {
     // For any unmatched url, redirect to /state1
-    $urlRouterProvider.when("", "/index/default")
-        .otherwise("/index/default"); 
+    $urlRouterProvider.when("", "/index/default");
+        // .otherwise("/index/default"); 
 });
+
 
